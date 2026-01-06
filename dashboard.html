@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 style="text-align:center;">Admin Dashboard</h2>
+
+<div style="width:400px;margin:30px auto;">
+    <input type="text" id="title" placeholder="Design Name" style="width:100%;padding:10px;"><br><br>
+    <input type="text" id="image" placeholder="Image Path (images/design.jpg)" style="width:100%;padding:10px;"><br><br>
+    <button onclick="addDesign()" style="width:100%;padding:10px;">Add Design</button>
+</div>
+
+<script>
+function addDesign() {
+    let designs = JSON.parse(localStorage.getItem("designs")) || [];
+
+    const title = document.getElementById("title").value;
+    const image = document.getElementById("image").value;
+
+    designs.push({ title, image });
+
+    localStorage.setItem("designs", JSON.stringify(designs));
+
+    alert("Design Added Successfully");
+}
+</script>
+
+</body>
+</html>

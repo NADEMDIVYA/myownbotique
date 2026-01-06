@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kalpana Boutique</title>
+
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= LEFT SIDEBAR MENU ================= -->
+    <div class="welcome">
+    <h1>Welcome to Kalpana Boutique</h1>
+    <p>Exclusive designer collections crafted with love</p>
+</div>
+
+<!-- HAMBURGER ICON (Mobile) -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<!-- SIDEBAR NAVIGATION -->
+<nav class="sidebar" id="sidebar">
+    <h2>Kalpana Boutique</h2>
+
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="maggam.html" class="nav-link">Maggam Designs</a>
+    <a href="computer.html" class="nav-link">Computer Designs</a>
+    <a href="kurtis.html" class="nav-link">Kurtis</a>
+    <a href="lehanga.html" class="nav-link">Lehanga Cholis</a>
+    <a href="party.html" class="nav-link">Party Wear</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+    <a href="admin.html" class="nav-link">AdminLogin</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+    <!-- Your page content goes here -->
+</div>
+
+<!-- ================= MAIN CONTENT AREA ================= -->
+<div class="main">
+
+    <!-- Welcome section -->
+    <h1>Welcome to Kalpana Boutique</h1>
+    <p>Beautiful designs for every occasion</p>
+
+      <div class="scroll-container">
+        <div class="scroll-content">
+            <img src="images/design1.jpeg" onclick="openModal(this)">
+<img src="images/computer2.jpeg" onclick="openModal(this)">
+<img src="images/maggam1.jpeg" onclick="openModal(this)">
+<img src="images/Kids_choli1.jpeg" onclick="openModal(this)">
+<img src="images/lehanga_choli1.jpeg">
+<img src="images/partywear1.jpeg" onclick="openModal(this)">
+        </div>
+    </div>
+ <h2>Explore More Designs</h2>
+
+    <!-- Designs will be shown here dynamically using JS -->
+    <div id="designs" class="designs"></div>
+   
+
+</div>
+
+<!-- Linking external JavaScript file -->
+<script src="script.js"></script>
+
+<!-- IMAGE POPUP MODAL -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
+</body>
+</html>
